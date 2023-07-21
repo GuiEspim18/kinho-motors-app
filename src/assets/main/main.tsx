@@ -1,0 +1,1 @@
+export const main: string = "#1c1c1c";
