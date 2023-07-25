@@ -5,15 +5,26 @@ import { main } from "../../../../assets/main/main";
 const StyledHeader = styled.header`
     width: 100%;
     height: 70px;
+    padding: 10px 0px;
     background: ${main};
+`;
+
+const StyledContainer = styled(Container)`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+
+const StyledImgage = styled.img`
+    width: 200px;
 `;
 
 export const Header = (): JSX.Element => {
     return (
         <StyledHeader>
-            <Container>
-
-            </Container>
+            <StyledContainer>
+                <StyledImgage src="/images/img-header.png" alt="" />
+            </StyledContainer>
         </StyledHeader>
     );
 }
