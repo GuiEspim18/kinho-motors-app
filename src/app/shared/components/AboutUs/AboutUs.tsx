@@ -15,34 +15,40 @@ const StyledDiv = styled.div`
 const StyledContainer = styled(Container)`
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
     div {
         width: 40%;
     }
+`;
 
-    div > img {
+const StyledImageDiv = styled.div`
+    display: flex;
+    justify-content: flex-end;
+`;
+
+const StyledTextDiv = styled.div`
+    /* background: ${transparentBg};
+    padding: 10px;
+    border-radius: 5px; */
+
+    img {
         border-radius: 5px;
         box-shadow: 4px 4px 10px ${shadow};
-    }
-
-    .imageDiv {
-        display: flex;
-        justify-content: flex-end;
     }
 `;
 
 export const AboutUs = (): JSX.Element => {
     return (
-        <StyledDiv>
+        <StyledDiv id="#aboutUs">
             <StyledContainer>
-                <div>
+                <StyledTextDiv>
                     <h1>Quem Somos?</h1>
                     <p>Kinho Motors é uma oficina automotiva de destaque, liderada pelo apaixonado mecânico Kinho. Com mais de 20 anos de experiência, sua equipe experiente oferece serviços de manutenção, reparos e personalização, sempre atualizados com as últimas tendências. Com ética, qualidade e atendimento acolhedor, conquistam a confiança e satisfação dos clientes diariamente.</p>
-                </div>
-                <div className="image-div">
+                </StyledTextDiv>
+                <StyledImageDiv>
                     <img src="/images/image2.png" alt="" />
-                </div>
+                </StyledImageDiv>
             </StyledContainer>
         </StyledDiv>
     );

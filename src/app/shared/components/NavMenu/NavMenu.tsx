@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Container } from "../../../../assets/css/GlobalStyles";
 import { TNavMenu } from "../../utils/types/nav-menu/nav-menu.types";
-import { main, text1, transparentBg2 } from "../../../../assets/main/main";
+import { main, text1 } from "../../../../assets/main/main";
 import { Button } from "@mui/material";
 import { Fragment } from "react";
 
@@ -47,38 +47,61 @@ export const NavMenu = (): JSX.Element => {
     const menu: Array<TNavMenu> = [
         {
             id: 0,
-            name: "Quem somos"
+            name: "Quem somos",
+            anchor: "#aboutUs"
         },
         {
             id: 1,
-            name: "Serviços"
+            name: "Serviços",
+            anchor: "#services"
         },
         {
             id: 2,
-            name: "Blog"
+            name: "Blog",
+            anchor: "#blog"
         },
         {
             id: 3,
-            name: "Avaliações"
+            name: "Avaliações",
+            anchor: "#avaliations"
         },
         {
             id: 4,
-            name: "Nos encontre"
+            name: "Nos encontre",
+            anchor: "#findUs"
         },
         {
             id: 5,
-            name: "Contato"
+            name: "Contato",
+            anchor: "#contact"
         }
     ];
 
 
+    const navigate = (anchor: string) => {
+        const element: Element | null = document.querySelector(anchor);
+        element?.scrollIntoView();
+    }
+
+
     const populate = (): Array<JSX.Element> => {
         return menu.map((element: TNavMenu) => {
-            if (element.id !== 0) return (<Fragment key={element.id}><StyledHr/><li><Button variant="text">{element.name}</Button></li></Fragment>);
-            return (<li key={element.id}><Button variant="text">{element.name}</Button></li>);
+            if (element.id !== 0) return (
+                <Fragment key={element.id}>
+                    <StyledHr />
+                    <li>
+                        <Button variant="text" onClick={() => navigate(element.anchor)}>{element.name}</Button>
+                    </li>
+                </Fragment>
+            );
+            return (
+                <li key={element.id}>
+                    <Button variant="text" onClick={() => navigate(element.anchor)}>{element.name}</Button>
+                </li>
+            );
         });
     };
-    
+
 
     return (
         <StyledNav>
