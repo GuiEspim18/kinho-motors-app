@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { Header } from "./app/shared/components/Header/Header";
+import { Home } from "./app/pages/Home";
 
 
 /** 
@@ -10,7 +10,7 @@ import { Header } from "./app/shared/components/Header/Header";
 const App = (): JSX.Element => {
   return (
     <Fragment>
-      <Header />
+      <Home />
     </Fragment>
   );
 }
