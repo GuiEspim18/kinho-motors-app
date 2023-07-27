@@ -1,15 +1,12 @@
 import { styled } from "styled-components";
 import { shadow, text2, transparentBg } from "../../../../assets/main/main";
 import { Container } from "../../../../assets/css/GlobalStyles";
+import { TAboutUs, TImage } from "../../utils/types/about-us/about-us";
 
 const StyledDiv = styled.div`
     width: 100%;
     padding: 20px 0px;
     background: ${transparentBg};
-
-    h1, p {
-        color: ${text2};
-    }
 `;
 
 const StyledContainer = styled(Container)`
@@ -25,12 +22,6 @@ const StyledContainer = styled(Container)`
 const StyledImageDiv = styled.div`
     display: flex;
     justify-content: flex-end;
-`;
-
-const StyledTextDiv = styled.div`
-    /* background: ${transparentBg};
-    padding: 10px;
-    border-radius: 5px; */
 
     img {
         border-radius: 5px;
@@ -38,16 +29,27 @@ const StyledTextDiv = styled.div`
     }
 `;
 
-export const AboutUs = (): JSX.Element => {
+const StyledTextDiv = styled.div`
+   h1, p {
+        color: ${text2};
+    }
+`;
+
+export const AboutUs = (props: TAboutUs): JSX.Element => {
+
+    const title: string = props.title;
+    const text: string = props.text;
+    const image: TImage = props.image;
+
     return (
         <StyledDiv id="#aboutUs">
             <StyledContainer>
                 <StyledTextDiv>
-                    <h1>Quem Somos?</h1>
-                    <p>Kinho Motors é uma oficina automotiva de destaque, liderada pelo apaixonado mecânico Kinho. Com mais de 20 anos de experiência, sua equipe experiente oferece serviços de manutenção, reparos e personalização, sempre atualizados com as últimas tendências. Com ética, qualidade e atendimento acolhedor, conquistam a confiança e satisfação dos clientes diariamente.</p>
+                    <h1>{title}</h1>
+                    <p>{text}</p>
                 </StyledTextDiv>
                 <StyledImageDiv>
-                    <img src="/images/image2.png" alt="" />
+                    <img src={image.src} alt={image.alt} />
                 </StyledImageDiv>
             </StyledContainer>
         </StyledDiv>

@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { Container } from "../../../../assets/css/GlobalStyles";
 import { main } from "../../../../assets/main/main";
 import { NavMenu } from "../NavMenu/NavMenu";
+import { THeader } from "../../utils/types/header/header.types";
 
 const StyledHeader = styled.header`
     width: 100%;
-    /* height: 70px; */
     padding: 10px 0px;
     background: ${main};
 `;
@@ -20,11 +20,14 @@ const StyledImgage = styled.img`
     width: 200px;
 `;
 
-export const Header = (): JSX.Element => {
+export const Header = (props: THeader): JSX.Element => {
+
+    const image: string = props.image;
+
     return (
         <StyledHeader>
             <StyledContainer>
-                <StyledImgage src="/images/img-header.png" alt="" />
+                <StyledImgage src={image} alt="" />
             </StyledContainer>
             <NavMenu />
         </StyledHeader>

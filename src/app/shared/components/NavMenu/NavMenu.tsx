@@ -32,9 +32,9 @@ const Navs = styled.ul`
 `;
 
 const StyledNav = styled.nav`
-    top: 0;
-    position: sticky;
-    background: ${main};
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000;
 `;
 
 const StyledHr = styled.div`
@@ -53,7 +53,7 @@ export const NavMenu = (): JSX.Element => {
         {
             id: 1,
             name: "Serviços",
-            anchor: "#services"
+            anchor: "#jobs"
         },
         {
             id: 2,
