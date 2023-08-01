@@ -3,7 +3,7 @@ import { shadow, text2, transparentBg } from "../../../../assets/main/main";
 import { Container } from "../../../../assets/css/GlobalStyles";
 import { TAboutUs, TImage } from "../../utils/types/about-us/about-us";
 
-const StyledDiv = styled.div`
+const Content = styled.section`
     width: 100%;
     padding: 20px 0px;
     background: ${transparentBg};
@@ -29,7 +29,7 @@ const StyledImageDiv = styled.div`
     }
 `;
 
-const StyledTextDiv = styled.div`
+const TextDiv = styled.div`
    h1, p {
         color: ${text2};
     }
@@ -42,16 +42,16 @@ export const AboutUs = (props: TAboutUs): JSX.Element => {
     const image: TImage = props.image;
 
     return (
-        <StyledDiv id="#aboutUs">
+        <Content id="#aboutUs">
             <StyledContainer>
-                <StyledTextDiv>
+                <TextDiv>
                     <h1>{title}</h1>
                     <p>{text}</p>
-                </StyledTextDiv>
+                </TextDiv>
                 <StyledImageDiv>
                     <img src={image.src} alt={image.alt} />
                 </StyledImageDiv>
             </StyledContainer>
-        </StyledDiv>
+        </Content>
     );
 }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Container } from "../../../../assets/css/GlobalStyles";
 import { TNavMenu } from "../../utils/types/nav-menu/nav-menu.types";
-import { main, text1 } from "../../../../assets/main/main";
+import {text1 } from "../../../../assets/main/main";
 import { Button } from "@mui/material";
 import { Fragment } from "react";
 

@@ -1,6 +1,6 @@
-import { Theme } from "@emotion/react";
 import styled, { StyledComponent } from "@emotion/styled";
 import { ExecutionProps, createGlobalStyle } from "styled-components";
+import { card, cardHover, main2 } from "../main/main";
 
 
 /** 
@@ -22,6 +22,28 @@ export const Global: React.NamedExoticComponent<ExecutionProps & object> = creat
     code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: ${main2};
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: ${card};
+        width: 20px;
+        border-radius: 5px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: ${cardHover};
     }
 `;
 

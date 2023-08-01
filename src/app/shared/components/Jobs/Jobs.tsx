@@ -4,11 +4,12 @@ import { text3 } from "../../../../assets/main/main";
 import { Container } from "../../../../assets/css/GlobalStyles";
 import { Card } from "../Card/Card";
 
-const StyledJobsDiv = styled.div`
+const Content = styled.div`
     width: 100%;
 
     h2 {
         color: ${text3};
+        text-align: center;
     }
 `;
 
@@ -29,7 +30,7 @@ export const Jobs = (props: TJobs): JSX.Element => {
     }
 
     return (
-        <StyledJobsDiv id="jobs">
+        <Content id="jobs">
             <Container>
                 <div>
                     <h2>{title}</h2>
@@ -38,6 +39,6 @@ export const Jobs = (props: TJobs): JSX.Element => {
                     {populate()}
                 </StyledCards>
             </Container>
-        </StyledJobsDiv>
+        </Content>
     );
 }
