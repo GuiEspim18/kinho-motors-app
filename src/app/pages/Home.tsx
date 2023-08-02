@@ -13,6 +13,10 @@ import { blogContent } from "../shared/utils/moc/blog/blog.moc";
 import { Reviews } from "../shared/components/Reviews/Reviews";
 import { TReviews } from "../shared/utils/types/reviews/reviews.types";
 import { reviewsContent } from "../shared/utils/moc/reviews/reviews.moc";
+import { FindUs } from "../shared/components/FindUs/FindUs";
+import { TFindUs } from "../shared/utils/types/find-us/find-us.types";
+import { findUsContent } from "../shared/utils/moc/find-us/find-us.moc";
+import { Footer } from "../shared/components/Footer/Footer";
 
 const StyledContent = styled.main`
     background-image: url('/images/background.svg');
@@ -28,6 +32,7 @@ export const Home = (): JSX.Element => {
     const jobs: TJobs = jobsContent;
     const blog: TBlog = blogContent;
     const reviews: Array<TReviews> = reviewsContent;
+    const findUs: TFindUs = findUsContent;
 
     return (
         <Fragment>
@@ -37,7 +42,9 @@ export const Home = (): JSX.Element => {
                 <Jobs title={jobs.title} jobs={jobs.jobs} />
                 <Blog title={blog.title} subTitle={blog.subTitle} content={blog.content}/>
                 <Reviews reviews={reviews}/>
+                <FindUs title={findUs.title} content={findUs.content} />
             </StyledContent>
+            <Footer />
         </Fragment>
     );
 }

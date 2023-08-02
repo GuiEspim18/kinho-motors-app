@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
-import { card, main, text1 } from "../../../../assets/main/main";
+import { main, shadow, text1 } from "../../../../assets/main/main";
 import { TReviews } from "../../utils/types/reviews/reviews.types";
-import { Button } from "@mui/material";
+import { RedButton } from "../RedButton/RedButton";
 
 const Card = styled.div`
     background: ${main};
@@ -9,6 +9,7 @@ const Card = styled.div`
     padding: 20px;
     max-width: 500px;
     border-radius: 20px;
+    box-shadow: 4px 4px 10px ${shadow};
 `;
 
 const Img = styled.img`
@@ -19,11 +20,6 @@ const FooterCard = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-`;
-
-const StyledButton = styled(Button)`
-    background: ${card} !important;
-    color: ${text1} !important;
 `;
 
 export const ReviewsCard = (props: TReviews): JSX.Element => {
@@ -48,7 +44,7 @@ export const ReviewsCard = (props: TReviews): JSX.Element => {
                 <div>
                     {popStars()}
                 </div>
-                <StyledButton onClick={() => window.open(link, '_blank')?.focus()}>Ver avaliação</StyledButton>
+                <RedButton text="Ver avaliação" redirect={true} link={link}></RedButton>
             </FooterCard>
         </Card>
     );

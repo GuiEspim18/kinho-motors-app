@@ -1,6 +1,6 @@
 import styled, { StyledComponent } from "@emotion/styled";
 import { ExecutionProps, createGlobalStyle } from "styled-components";
-import { card, cardHover, main2 } from "../main/main";
+import { card, cardHover, lightGray, main2, shadow, transparentBg } from "../main/main";
 
 
 /** 
@@ -10,13 +10,14 @@ import { card, cardHover, main2 } from "../main/main";
 
 export const Global: React.NamedExoticComponent<ExecutionProps & object> = createGlobalStyle`
     body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+            'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+            sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+        overflow: overlay;
     }
 
     code {
@@ -26,19 +27,21 @@ export const Global: React.NamedExoticComponent<ExecutionProps & object> = creat
 
     /* width */
     ::-webkit-scrollbar {
-        width: 10px;
+        width: 15px;
+        height: 10px;
     }
 
     /* Track */
     ::-webkit-scrollbar-track {
-        background: ${main2};
+        background: ${lightGray};
     }
 
     /* Handle */
     ::-webkit-scrollbar-thumb {
         background: ${card};
         width: 20px;
-        border-radius: 5px;
+        border-radius: 15px;
+        border: solid 2px ${lightGray};
     }
 
     /* Handle on hover */

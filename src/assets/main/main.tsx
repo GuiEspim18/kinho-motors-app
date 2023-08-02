@@ -11,5 +11,7 @@ export const shadow: string = "#0000005b";
 export const card: string = "#D9242D";
 export const cardHover: string = "#c81e27";
 
+export const lightGray: string = "#b6b6b6"
+
 export const transparentBg: string = "#d9d9d995";
 export const transparentBg2: string = "#d9d9d9";
