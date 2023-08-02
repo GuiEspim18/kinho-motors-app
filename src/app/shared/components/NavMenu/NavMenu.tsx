@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { Container } from "../../../../assets/css/GlobalStyles";
 import { TNavMenu } from "../../utils/types/nav-menu/nav-menu.types";
-import {text1 } from "../../../../assets/main/main";
+import { text1 } from "../../../../assets/main/main";
 import { Button } from "@mui/material";
 import { Fragment } from "react";
+import { navMenuContent } from "../../utils/moc/nav-menu/nav-menu.moc";
 
 const Navs = styled.ul`
     width: 100%;
@@ -32,9 +33,8 @@ const Navs = styled.ul`
 `;
 
 const StyledNav = styled.nav`
-    position: sticky !important;
-    top: 0 !important;
     z-index: 1000;
+    display: block;
 `;
 
 const StyledHr = styled.div`
@@ -44,39 +44,7 @@ const StyledHr = styled.div`
 
 export const NavMenu = (): JSX.Element => {
 
-    const menu: Array<TNavMenu> = [
-        {
-            id: 0,
-            name: "Quem somos",
-            anchor: "#aboutUs"
-        },
-        {
-            id: 1,
-            name: "Serviços",
-            anchor: "#jobs"
-        },
-        {
-            id: 2,
-            name: "Blog",
-            anchor: "#blog"
-        },
-        {
-            id: 3,
-            name: "Avaliações",
-            anchor: "#reviews"
-        },
-        {
-            id: 4,
-            name: "Nos encontre",
-            anchor: "#findUs"
-        },
-        {
-            id: 5,
-            name: "Contato",
-            anchor: "#contact"
-        }
-    ];
-
+    const menu: Array<TNavMenu> = navMenuContent;
 
     const navigate = (anchor: string) => {
         const element: Element | null = document.querySelector(anchor);

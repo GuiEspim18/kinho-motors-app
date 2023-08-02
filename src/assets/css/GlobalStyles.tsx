@@ -16,8 +16,12 @@ export const Global: React.NamedExoticComponent<ExecutionProps & object> = creat
             sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        overflow-x: hidden;
-        overflow: overlay;
+        /* overflow-x: hidden; */
+        /* overflow: overlay; */
+    }
+
+    html {
+        scroll-behavior: smooth !important;
     }
 
     code {

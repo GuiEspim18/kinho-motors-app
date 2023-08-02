@@ -1,7 +1,7 @@
-import { TFindUs } from "../../types/find-us/find-us.types";
+import { TContact } from "../../types/contact/find-us.types";
 
-export const findUsContent: TFindUs = {
-    title: "Nos encontre",
+export const contactContent: TContact = {
+    title: "Contato",
     content: [
         {
             title: "Localização",

@@ -1,4 +1,4 @@
-export type TFindUs = {
+export type TContact = {
     title: string,
     content: Array<TContent>
 }

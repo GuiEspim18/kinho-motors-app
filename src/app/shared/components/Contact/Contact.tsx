@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Container } from "../../../../assets/css/GlobalStyles";
-import { main2, shadow, text1, text2, text3 } from "../../../../assets/main/main";
-import { TContent, TFindUs } from "../../utils/types/find-us/find-us.types";
+import { main2, shadow, text1, text2 } from "../../../../assets/main/main";
+import { TContent, TContact } from "../../utils/types/contact/find-us.types";
 
 const Title = styled.div`
     width: 100%;
@@ -13,14 +13,6 @@ const Title = styled.div`
         text-align: center;
         margin: 0;
     }
-`;
-
-const Iframe = styled.iframe`
-    width: 45%;
-    height: 400px;
-    border: 0;
-    border-radius: 10px;
-    box-shadow: 4px 4px 10px ${shadow};
 `;
 
 const Content = styled.div`
@@ -63,7 +55,7 @@ const CardTitle = styled.div`
 `;
 
 
-export const FindUs = (props: TFindUs): JSX.Element => {
+export const Contact = (props: TContact): JSX.Element => {
 
     const title: string = props.title;
     const content: Array<TContent> = props.content;
@@ -82,7 +74,7 @@ export const FindUs = (props: TFindUs): JSX.Element => {
     }
 
     return (
-        <div id="find-us">
+        <div id="contact">
             <Container>
                 <Title>
                     <h2>{title}</h2>
@@ -96,5 +88,5 @@ export const FindUs = (props: TFindUs): JSX.Element => {
 }
 
 /*
-    <Iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.0059167278296!2d-46.578064124671855!3d-23.496296378844548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5f5da4918c4d%3A0xec0787a75e8c71a8!2sKinho%20Motor&#39;s%20Centro%20Automotivo!5e0!3m2!1spt-BR!2sbr!4v1690990434838!5m2!1spt-BR!2sbr" allowFullScreen={false} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></Iframe>
+    
 */

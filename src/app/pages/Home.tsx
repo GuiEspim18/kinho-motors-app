@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { Header } from "../shared/components/Header/Header";
+import Header from "../shared/components/Header/Header";
 import styled from "styled-components";
 import { AboutUs } from "../shared/components/AboutUs/AboutUs";
 import { aboutUsContent } from "../shared/utils/moc/about-us/about-us.moc";
@@ -13,9 +13,9 @@ import { blogContent } from "../shared/utils/moc/blog/blog.moc";
 import { Reviews } from "../shared/components/Reviews/Reviews";
 import { TReviews } from "../shared/utils/types/reviews/reviews.types";
 import { reviewsContent } from "../shared/utils/moc/reviews/reviews.moc";
-import { FindUs } from "../shared/components/FindUs/FindUs";
-import { TFindUs } from "../shared/utils/types/find-us/find-us.types";
-import { findUsContent } from "../shared/utils/moc/find-us/find-us.moc";
+import { Contact } from "../shared/components/Contact/Contact";
+import { TContact, TContent } from "../shared/utils/types/contact/find-us.types";
+import { contactContent } from "../shared/utils/moc/find-us/find-us.moc";
 import { Footer } from "../shared/components/Footer/Footer";
 
 const StyledContent = styled.main`
@@ -32,7 +32,7 @@ export const Home = (): JSX.Element => {
     const jobs: TJobs = jobsContent;
     const blog: TBlog = blogContent;
     const reviews: Array<TReviews> = reviewsContent;
-    const findUs: TFindUs = findUsContent;
+    const contact: TContact = contactContent;
 
     return (
         <Fragment>
@@ -42,7 +42,7 @@ export const Home = (): JSX.Element => {
                 <Jobs title={jobs.title} jobs={jobs.jobs} />
                 <Blog title={blog.title} subTitle={blog.subTitle} content={blog.content}/>
                 <Reviews reviews={reviews}/>
-                <FindUs title={findUs.title} content={findUs.content} />
+                <Contact title={contact.title} content={contact.content} />
             </StyledContent>
             <Footer />
         </Fragment>

@@ -42,7 +42,7 @@ export const AboutUs = (props: TAboutUs): JSX.Element => {
     const image: TImage = props.image;
 
     return (
-        <Content id="#aboutUs">
+        <Content id="aboutUs">
             <StyledContainer>
                 <TextDiv>
                     <h1>{title}</h1>
