@@ -27,6 +27,7 @@ const CardDiv = styled.div<CardDivProps>`
     display: flex;
     width: 100%;
     justify-content: ${(props: CardDivProps) => props.align};
+    margin-bottom: 20px;
 `;
 
 
