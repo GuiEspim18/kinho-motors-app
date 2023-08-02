@@ -63,7 +63,7 @@ export const NavMenu = (): JSX.Element => {
         {
             id: 3,
             name: "Avaliações",
-            anchor: "#avaliations"
+            anchor: "#reviews"
         },
         {
             id: 4,

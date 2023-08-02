@@ -10,6 +10,9 @@ import { jobsContent } from "../shared/utils/moc/jobs/jobs.moc";
 import { Blog } from "../shared/components/Blog/Blog";
 import { TBlog } from "../shared/utils/types/blog/blog.types";
 import { blogContent } from "../shared/utils/moc/blog/blog.moc";
+import { Reviews } from "../shared/components/Reviews/Reviews";
+import { TReviews } from "../shared/utils/types/reviews/reviews.types";
+import { reviewsContent } from "../shared/utils/moc/reviews/reviews.moc";
 
 const StyledContent = styled.main`
     background-image: url('/images/background.svg');
@@ -24,6 +27,7 @@ export const Home = (): JSX.Element => {
     const aboutUs: TAboutUs = aboutUsContent;
     const jobs: TJobs = jobsContent;
     const blog: TBlog = blogContent;
+    const reviews: Array<TReviews> = reviewsContent;
 
     return (
         <Fragment>
@@ -32,6 +36,7 @@ export const Home = (): JSX.Element => {
                 <AboutUs title={aboutUs.title} text={aboutUs.text} image={aboutUs.image} />
                 <Jobs title={jobs.title} jobs={jobs.jobs} />
                 <Blog title={blog.title} subTitle={blog.subTitle} content={blog.content}/>
+                <Reviews reviews={reviews}/>
             </StyledContent>
         </Fragment>
     );
