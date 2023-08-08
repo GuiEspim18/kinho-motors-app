@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import Header from "../shared/components/Header/Header";
+import { Header } from "../shared/components/Header/Header";
 import styled from "styled-components";
 import { AboutUs } from "../shared/components/AboutUs/AboutUs";
 import { aboutUsContent } from "../shared/utils/moc/about-us/about-us.moc";
@@ -14,7 +14,7 @@ import { Reviews } from "../shared/components/Reviews/Reviews";
 import { TReviews } from "../shared/utils/types/reviews/reviews.types";
 import { reviewsContent } from "../shared/utils/moc/reviews/reviews.moc";
 import { Contact } from "../shared/components/Contact/Contact";
-import { TContact, TContent } from "../shared/utils/types/contact/find-us.types";
+import { TContact } from "../shared/utils/types/contact/find-us.types";
 import { contactContent } from "../shared/utils/moc/find-us/find-us.moc";
 import { Footer } from "../shared/components/Footer/Footer";
 

@@ -1,18 +1,15 @@
 import styled from "styled-components";
 import { Container } from "../../../../assets/css/GlobalStyles";
 import { TNavMenu } from "../../utils/types/nav-menu/nav-menu.types";
-import { text1 } from "../../../../assets/main/main";
+import { device, text1 } from "../../../../assets/main/main";
 import { Button } from "@mui/material";
 import { Fragment } from "react";
 import { navMenuContent } from "../../utils/moc/nav-menu/nav-menu.moc";
 
 const Navs = styled.ul`
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
     padding: 20px 0;
+    margin: 0;
     list-style: none;
     flex-flow:row;
 
@@ -28,13 +25,24 @@ const Navs = styled.ul`
                 background: transparent;
             }
         }
-        
+    }
+
+    @media screen and (${device.laptop.max}) {
+        padding: 0px;
+        display: none;
+    }
+
+    @media screen and (${device.laptop.min}) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 `;
 
 const StyledNav = styled.nav`
     z-index: 1000;
     display: block;
+
 `;
 
 const StyledHr = styled.div`
